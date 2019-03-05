@@ -88,6 +88,8 @@ Util.fizzBuzz = function(n) {
  * @param phrase
  * @returns {string}
  */
+/*
 Util.cipher = function(phrase) {};
 
 module.exports = Util;
+*/
