@@ -66,15 +66,14 @@ Util.sumPrime = function(n) {
  * @returns {array}
  */
 Util.fizzBuzz = function(n) {
-  let result = new Array(n);
+  let arr = new Array(n);
   let Fizz = 'Fizz';
   let Buzz = 'Buzz';
-  result.fill(1).map((_, i) => i + 1);
+  let result = arr.fill(1).map((_, i) => i + 1);
   for (var i = 0; i < result.length; i++) {
     let str = '';
-    console.log(result[i]);
     if (result[i] % 3 === 0) str += Fizz;
-    if (result[i] % 5 === 5) str += Buzz;
+    if (result[i] % 5 === 0) str += Buzz;
     if (result[i] % 3 === 0 || result[i] % 5 === 0) result[i] = str;
   }
   return result;
