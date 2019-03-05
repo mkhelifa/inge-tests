@@ -47,6 +47,6 @@ describe('Factorial', function() {
       ]
     ]
   ])('fizzbuzz (%i)', (n, expected) => {
-    expect(Util.fizzBuzz(n)).toBe(expected);
+    expect(Util.fizzBuzz(n)).toEqual(expected);
   });
 });
