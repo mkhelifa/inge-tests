@@ -122,7 +122,22 @@ class Interval {
    * @param {Interval} interval
    * @returns {Interval[]}
    */
-  exclusion(interval) {}
+  exclusion(interval) {
+    if (!this.overlaps(interval)) {
+      return [this, interval];
+    } else {
+      return [
+        new Interval(
+          Math.min(this.start, interval.start),
+          Math.max(this.start, interval.start)
+        ),
+        new Interval(
+          Math.min(this.end, interval.end),
+          Math.max(this.end, interval.end)
+        )
+      ];
+    }
+  }
 }
 
 module.exports = Interval;
