@@ -37,3 +37,13 @@ describe('union', function() {
     expect(inter1.union(inter2)).toEqual(expected);
   });
 });
+
+describe('intersection', function() {
+  test.each([
+    [new Interval(1, 3), new Interval(4, 7), []],
+    [new Interval(2, 4), new Interval(3, 7), [new Interval(3, 4)]],
+    [new Interval(0, 8), new Interval(8, 10), []]
+  ])('%s U %s', (inter1, inter2, expected) => {
+    expect(inter1.intersection(inter2)).toEqual(expected);
+  });
+});
