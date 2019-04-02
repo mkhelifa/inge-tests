@@ -7,7 +7,9 @@
     "test": "test"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "cover": "node node_modules/.bin/jest --coverage",
+    "mutation": "node node_modules/.bin/stryker run"
   },
   "repository": {
     "type": "git",
